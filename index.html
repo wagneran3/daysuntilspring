@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Days Until Spring</title>
+    
+<style>
+    
+    #day {position: relative;
+        top: 80px;
+        left:85px;
+        font-size:30px;}
+    
+    #spring {background-image: url('images/flower.png');
+            background-repeat: no-repeat;
+            background-position:top left;
+            width:900px;
+            height:250px;
+    }
+    
+</style>
+    
+
+
+<script type="text/javascript">
+    
+function daystospring () {
+    var oneday = 24*60*60*1000; //hours*minutes*seconds*miliseconds
+    var today = new Date (); //today
+    var spring = new Date (2020,2,19); //first day of spring
+    var diffdays = Math.round((spring.getTime() - today.getTime())/(oneday));
+    return diffdays; //Spring minus today divided by oneday 
+} 
+ 
+</script>
+</head>
+
+<body>
+    <div id="spring">
+        <span id="day">
+            <script>document.write(daystospring());</script>
+        </span>
+    
+    </div>
+    <h1>Days Until Spring 2020!</h1>
+
+</body>
+</html>
+
+
